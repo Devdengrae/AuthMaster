@@ -3,8 +3,6 @@ const {registerUser,loginUser,changePassword}=require('../controllers/auth-contr
 const authMiddleware=require("../middleware/auth-middleware.js")
 const router=express.Router();
 
-
-
 router.post("/register",registerUser);
 router.post("/login",loginUser);
 router.post("/changePassword",authMiddleware,changePassword);
